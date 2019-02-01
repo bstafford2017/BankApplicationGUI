@@ -176,7 +176,7 @@ public class BankAppGUI extends JFrame {
 			
 			// Get username and password
 			String username = userField.getText();
-			String password = passField.getPassword().toString();
+			String password = new String(passField.getPassword());
 			
 			
 			// Trim input
@@ -277,9 +277,9 @@ public class BankAppGUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				// Get user input
-				String username = userField.getText();
-				String password = passField.getPassword().toString();
-				String conPass = conField.getPassword().toString();
+				String username = new String(userField.getText());
+				String password = new String(passField.getPassword());
+				String conPass = new String(conField.getPassword());
 				
 				// Trim input
 				username = username.trim();
